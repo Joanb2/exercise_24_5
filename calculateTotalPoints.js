@@ -5,7 +5,9 @@ const calculateTotalPoints = (distance, hillSize, kPoint, styleNotes, windFactor
 	const distancePoints = calculateDistancePoints(distance, hillSize, kPoint);
 	const stylePoints = calculateStylePoints(styleNotes);
 
-	return distancePoints + stylePoints + windFactor + gateFactor;
+	const totalPoints = distancePoints + stylePoints + windFactor + gateFactor;
+
+	return totalPoints.toFixed(1);
 }
 
 module.exports = calculateTotalPoints;
